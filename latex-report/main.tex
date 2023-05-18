@@ -1,0 +1,106 @@
+\documentclass[12pt,a4paper,2sides]{report}
+
+\usepackage{lib/lib} %import libary from lib.sty %
+%Thêm thư viện ở dưới dòng này.
+\usepackage{float}
+\onehalfspacing %Giãn dòng phân nửa.
+%===============================
+%Thêm dữ liệu vào intro.tex qua dòng lệnh.
+%Addition into data at intro.tex file via command.
+\newcommand{\khoa}{Information Technology} %TÊN NGÀNH, KHOA.
+\newcommand{\de}{FINAL REPORT}
+\newcommand{\monhoc}{Enterprise Systems Development Concepts} %TÊN MÔN HỌC 
+\newcommand{\gvhd}{Duong Huu Phuc} %TÊN CỦA GIẢNG VIÊN HƯỚNG DẪN
+\newcommand{\tacgia}{Bui Vi Ngoc Ngan - 520H0661} %TÊN CỦA NGƯỜI VIẾT
+\newcommand{\svhai}{Nguyen Nhat Phuong Quynh - 520H0676}
+\newcommand{\svba}{Bui Huu Loc - 521H0504}
+\newcommand{\nam}{2023}
+%Acknowledge page (the second page in docs)
+% \newcommand{\loicamon}{
+% 		Với những kiến thức em tích lũy được qua những ngày học tập, đây là kết quả của quá trình học tập của em và nhóm cùng đưa ra ý kiến và thảo luận, tổng hợp kiến thức lại với nhau.\\
+% }
+%tabl
+
+\begin{document}	
+\pagenumbering{roman}
+% \input{intro.tex}
+\begin{center}
+	\large{\textbf{VIETNAM GENERAL CONFEDERATION OF LABOUR}} \\
+	\large{\textbf{TON DUC THANG UNIVERSITY}} \\
+	\large{\textbf{\MakeUppercase{FACULTY OF \khoa}}} \\\vspace*{1cm}	
+	\includegraphics[width=0.5\linewidth]{lib/TDTlogo.jpg}\\\vspace*{1cm}	
+	\LARGE{\textbf{\MakeUppercase{\de}}}\\
+\Large{\textbf{\MakeUppercase{\monhoc}}}\vspace*{1.5cm}
+\begin{flushright}			
+    \large{\textit{Lecturer:}} \\
+	\large{\textbf{\gvhd}} 	\\
+    \large{\textit{Student:}} \\
+	\large{\textbf{\tacgia}}\\
+	\large{\textbf{\svhai}}\\
+	\large{\textbf{\svba}}\\
+	
+	\vspace*{1.5cm}
+\end{flushright}
+	\large{\textbf{Ho Chi Minh City, \nam.}}
+\end{center}	
+\newpage
+ 
+% \include{intro}
+
+\newpage
+\clearpage
+%--------------Mục lục
+\dominitoc
+\tableofcontents %pages
+%if you want to show table of contents of chapter, set \dominitoc under line \chapter{name}
+%\listoffigures %pictures
+\listoftables
+\listoffigures
+\newpage
+\clearpage
+
+%\setcounter{page}{-1}
+%\listoftables
+%\begin{figure/tables}
+%\centering
+%Sourcode/Import
+%\caption
+%\end{fugure/tables}
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\clearpage
+%\Control to file to create subfile.\\
+%\input{part1.tex}
+
+% chapter 1
+\chapter{Topic Overview}
+% \minitoc
+\newpage
+\include{chapter1}
+
+% chapter 2
+\chapter{System analysis and design}
+\newpage
+\include{chapter2}
+
+% chapter 3
+\chapter{Implement System}
+\newpage
+\include{chapter3}
+
+
+%chapter 4
+\chapter{Demo System}
+\newpage
+\include{chapter4}
+
+
+%Reference
+\include{References}
+
+
+%phụ lục 
+\include{appendixA}
+\end{document}
+
